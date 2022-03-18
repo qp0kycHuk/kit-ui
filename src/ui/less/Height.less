@@ -1,0 +1,47 @@
+// out:false
+
+.h {
+  &-100 {
+    height: 100%;
+  }
+
+  &-50 {
+    height: 50%;
+  }
+
+  &-auto {
+    height: auto !important;
+  }
+
+  &-md {
+    @media (min-width:@md) {
+      &-100 {
+        height: 100%;
+      }
+
+      &-50 {
+        height: 50%;
+      }
+
+      &-auto {
+        height: auto;
+      }
+    }
+  }
+
+  &-lg {
+    @media (min-width:@lg) {
+      &-100 {
+        height: 100%;
+      }
+
+      &-50 {
+        height: 50%;
+      }
+
+      &-auto {
+        height: auto;
+      }
+    }
+  }
+}

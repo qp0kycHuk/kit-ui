@@ -1,0 +1,333 @@
+// out: false
+
+
+.btn {
+	--btn-color-light: var(--color-text-20);
+	--btn-color      : var(--color-text);
+	--btn-text       : #fff;
+
+	background : none;
+	border     : none;
+	outline    : none;
+	user-select: none;
+	position   : relative;
+
+	display        : flex;
+	align-items    : center;
+	justify-content: center;
+
+	--size       : 40px;
+	height       : var(--size);
+	padding      : 0 calc(var(--size) / 2);
+	border-radius: var(--radius-small);
+
+	font-size  : 14px;
+	font-family: var(--font-base);
+	font-weight: bold;
+
+	transition: .2s ease;
+
+
+	// default variant
+	color: var(--btn-color);
+
+
+	&:focus:not(:active) {
+		background: var(--btn-color-light);
+
+	}
+
+	&:focus {
+		z-index: 2;
+
+	}
+
+
+	@media (hover) {
+		&:hover {
+			--btn-color      : var(--color-text-dark);
+			--btn-color-light: var(--color-text-40);
+		}
+	}
+
+	&:active {
+		transform: translateY(2px);
+	}
+
+	&:not(a, button, label):active {
+		transform: none;
+	}
+
+	// size
+	&-large {
+		--size   : 52px;
+		font-size: 16px;
+	}
+
+	&-small {
+		--size   : 28px;
+		font-size: 12px;
+	}
+
+	// color
+	&--primary {
+		--btn-color      : var(--color-primary);
+		--btn-color-light: var(--color-primary-10);
+		--btn-text       : #fff;
+
+		@media (hover) {
+			&:hover {
+				--btn-color      : var(--color-primary--dark);
+				--btn-color-light: var(--color-primary-20);
+			}
+		}
+	}
+
+	&--sec {
+		--btn-color      : var(--color-sec);
+		--btn-color-light: var(--color-sec-10);
+		--btn-text       : #fff;
+
+		@media (hover) {
+			&:hover {
+				--btn-color      : var(--color-sec--dark);
+				--btn-color-light: var(--color-sec-20);
+			}
+		}
+	}
+
+	&--red {
+		--btn-color      : var(--color-red);
+		--btn-color-light: var(--color-red-10);
+		--btn-text       : #fff;
+
+		@media (hover) {
+			&:hover {
+				--btn-color      : var(--color-red--dark);
+				--btn-color-light: var(--color-red-20);
+			}
+		}
+	}
+
+	&--blue {
+		--btn-color      : var(--color-blue);
+		--btn-color-light: var(--color-blue-10);
+		--btn-text       : #fff;
+
+		@media (hover) {
+			&:hover {
+				--btn-color      : var(--color-blue--dark);
+				--btn-color-light: var(--color-blue-20);
+			}
+		}
+	}
+
+	&--green {
+		--btn-color      : var(--color-green);
+		--btn-color-light: var(--color-green-10);
+		--btn-text       : #fff;
+
+		@media (hover) {
+			&:hover {
+				--btn-color      : var(--color-green--dark);
+				--btn-color-light: var(--color-green-20);
+			}
+		}
+	}
+
+	&--yellow {
+		--btn-color      : var(--color-yellow);
+		--btn-color-light: var(--color-yellow-10);
+		--btn-text       : #fff;
+
+		@media (hover) {
+			&:hover {
+				--btn-color      : var(--color-yellow--dark);
+				--btn-color-light: var(--color-yellow-20);
+			}
+		}
+	}
+
+	&--white {
+		--btn-color      : #fff;
+		--btn-color-light: rgba(255, 255, 255, 0.6);
+		--btn-text       : var(--color-text);
+
+		@media (hover) {
+			&:hover {
+				--btn-color      : #fff;
+				--btn-color-light: rgba(255, 255, 255, 0.7);
+			}
+		}
+	}
+
+	&--gray {
+		--btn-color      : rgba(49, 49, 49, 0.6);
+		--btn-color-light: #F5F7FB;
+		--btn-text       : #fff;
+
+		@media (hover) {
+			&:hover {
+				--btn-color      : rgba(49, 49, 49, 0.6);
+				--btn-color-light: #eef0f5;
+			}
+		}
+	}
+
+	&--color-icon {
+		--btn-color      : var(--color-icon);
+		--btn-color-light: var(--color-icon-20);
+		--btn-text       : #fff;
+
+		@media (hover) {
+			&:hover {
+				--btn-color      : var(--color-icon--dark);
+				--btn-color-light: var(--color-icon-30);
+			}
+		}
+	}
+
+
+
+	&:not(&--fill):not(&--light):not(&--contur):not(&--link):not(&--white-bg) {
+		@media(hover) {
+			&:hover {
+				background: var(--btn-color-light);
+
+			}
+		}
+	}
+
+
+	// variant
+
+
+
+	&--fill {
+		background: var(--btn-color);
+		color     : var(--btn-text);
+		border    : transparent;
+
+
+
+		&:focus:not(:active) {
+			background: var(--btn-color);
+			box-shadow: 0 0 0 5px var(--btn-color-light);
+
+		}
+
+	}
+
+	&--light {
+		background: var(--btn-color-light);
+		color     : var(--btn-color);
+
+		&:focus:not(:active) {
+			box-shadow: 0 0 0 2px var(--btn-color);
+			background: var(--btn-color-light);
+		}
+	}
+
+	&--contur {
+		background: transparent;
+		border    : 1px solid var(--btn-color);
+		color     : var(--btn-color);
+
+		@media(hover) {
+			&:hover {
+				background: var(--btn-color-light);
+			}
+		}
+
+		&:focus:not(:active) {
+			background: var(--btn-color-light);
+			box-shadow: 0 0 0 1px var(--btn-color), 0 0 0 5px var(--btn-color-light);
+		}
+	}
+
+	&--link {
+		padding: 0;
+		width  : auto;
+		height : auto;
+
+		background: transparent;
+		color     : var(--btn-color);
+
+		// border-bottom: 1px solid var(--btn-color);
+		border-radius: 0;
+
+
+		&:focus:not(:active) {
+			background: var(--btn-color-light);
+			box-shadow: 0 0 0 5px var(--btn-color-light);
+		}
+	}
+
+	&--white-bg {
+		background: var(--bg3);
+		box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+
+		@media(hover) {
+			&:hover {
+				background: var(--bg3);
+				box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12), 0 0 0 1px var(--btn-color);
+			}
+		}
+
+		&:focus:not(:active) {
+			background: var(--bg3);
+			box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12), 0 0 0 2px var(--btn-color);
+
+		}
+	}
+
+	// mod
+
+	&:disabled {
+		opacity       : 0.4;
+		pointer-events: none;
+	}
+
+	&-fab,
+	&-icon {
+		width  : var(--size);
+		padding: 0;
+	}
+
+	&-fab {
+		border-radius: 50%;
+	}
+
+}
+
+
+// .btn {
+// 	.ripple {
+// 		background: radial-gradient(rgba(255, 255, 255, 0.10) 0,
+// 				rgba(255, 255, 255, 0.20) 40%,
+// 				rgba(255, 255, 255, 0.20) calc(60% - 10px),
+// 				rgba(255, 255, 255, 0.20) 60%,
+// 				rgba(0, 0, 0, 0) calc(60% + 10px));
+// 	}
+// }
+
+// .btn--fill {
+// 	.ripple {
+// 		background: radial-gradient(rgba(255, 255, 255, 0.10) 0,
+// 				rgba(255, 255, 255, 0.20) 40%,
+// 				rgba(255, 255, 255, 0.20) calc(60% - 10px),
+// 				rgba(255, 255, 255, 0.20) 60%,
+// 				rgba(0, 0, 0, 0) calc(60% + 10px));
+// 	}
+// }
+
+
+// .btn--white-bg {
+// 	.ripple {
+// 		background: radial-gradient(var(--btn-color-light) 0,
+// 				var(--btn-color-light) 40%,
+// 				var(--btn-color-light) calc(60% - 10px),
+// 				var(--btn-color-light) 60%,
+// 				rgba(0, 0, 0, 0) calc(60% + 10px));
+// 	}
+// }

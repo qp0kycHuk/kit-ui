@@ -1,0 +1,31 @@
+// out:false
+
+
+
+.tab {
+	&-content-cover {
+		position: relative;
+	}
+
+	&-content {
+		transition : .3s ease .2s;
+		padding-top: 1px;
+
+		&-inner {
+			position: relative;
+		}
+
+		&:not(.tab-active) {
+			transition    : .3s ease;
+			position      : absolute;
+			left          : 0;
+			top           : 0;
+			pointer-events: none;
+			opacity       : 0;
+			width         : 100%;
+			transform     : translateY(10px);
+			max-height    : 100%;
+			overflow      : hidden;
+		}
+	}
+}

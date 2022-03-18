@@ -1,0 +1,59 @@
+// out:false
+
+.progress-circle {
+	animation      : progress-rotate 1.4s linear infinite;
+	display        : inline-flex;
+	align-items    : center;
+	justify-content: center;
+
+	font-size      : 32px;
+	min-width      : 1em;
+	width          : 1em;
+	height         : 1em;
+	mask           : url("../img/circleProgress.svg") no-repeat center / contain;
+	background     : currentColor;
+
+	.icon {
+		fill  : none;
+		stroke: currentColor;
+
+	}
+
+
+}
+
+.progress-container {
+	position: relative;
+}
+
+.progress-container * {
+	position: relative;
+}
+
+.progress-container .progress {
+	position: absolute;
+	width   : 32px;
+	height  : 32px;
+	left    : calc(50% - 16px);
+	top     : calc(50% - 16px);
+}
+
+.image .progress {
+	position: absolute;
+	width   : 32px;
+	height  : 32px;
+	left    : calc(50% - 16px);
+	top     : calc(50% - 16px);
+}
+
+
+@keyframes progress-rotate {
+
+	0% {
+		transform-origin: 50% 50%;
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}

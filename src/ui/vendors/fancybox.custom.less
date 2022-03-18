@@ -1,0 +1,60 @@
+// out:false
+
+
+
+.fancybox-custom-modal {
+  .fancybox__slide {
+    padding: 15px;
+
+    @media(max-width:@sm) {
+      padding: 0;
+
+    }
+  }
+
+  .fancybox__content,
+  .fancybox__container {
+    color: var(--color-text);
+  }
+
+  .fancybox__content {
+    padding   : 0;
+    background: none;
+
+    @media(max-width:@sm) {
+      width        : 100%;
+      border-radius: 16px 16px 0 0;
+    }
+  }
+
+  .carousel__button.is-close {
+    position       : fixed;
+    right          : 0;
+    top            : 0;
+    padding        : 16px;
+    width          : 68px;
+    height         : 68px;
+    animation-delay: .35s !important;
+
+    @media(max-width:@sm) {
+      position: absolute;
+      width   : 32px;
+      height  : 32px;
+      top     : 16px;
+      right   : 16px;
+      padding : 0;
+
+      border-radius: 50%;
+      background   : #F3F3F5;
+    }
+
+    svg {
+      @media(max-width:@sm) {
+        filter: none;
+        color : #000;
+        width : 12px;
+        height: 12px;
+      }
+    }
+  }
+}

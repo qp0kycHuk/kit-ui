@@ -1,0 +1,39 @@
+.copy-element-wrap {
+  position: relative;
+}
+.copy-element-btn {
+  position: absolute;
+  right: -webkit-calc(100% + 10px);
+  right: calc(100% + 10px);
+  top: 0;
+  background: #333;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  padding: 6px;
+  color: #fff;
+  font-size: 12px;
+  width: -webkit-max-content;
+  width: max-content;
+  -webkit-user-select: none;
+          user-select: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.copy-element-btn:hover {
+  background: #444;
+}
+.copy-element-wrap:hover .copy-element-btn {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: none;
+          transform: none;
+}
+.copy-element-btn.active {
+  background: #09a32b;
+}
